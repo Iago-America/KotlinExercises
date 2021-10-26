@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Exercício - LinearLayout, Checkbox e ImageView</string>
+    <string name="luz">Acender a luz!</string>
+</resources>
