@@ -15,5 +15,15 @@ class MainActivity : AppCompatActivity() {
 
         //definindo o adaptador na lista
         list_view_produtos.adapter = produtosAdapter
+
+        //definição do ouvinte do botão
+        btn_inserir.setOnClickListener() {
+            val produto = txt_produto.text.toString() //pegando o valor digitado pelo usuário
+
+            produtosAdapter.add(produto) //enviando o item para a lista
+        }
+
+
+
     }
 }
