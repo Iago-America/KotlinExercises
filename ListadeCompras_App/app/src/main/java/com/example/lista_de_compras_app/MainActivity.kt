@@ -1,5 +1,6 @@
 package com.example.lista_de_compras_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,23 +13,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btn_adicionar.setOnClickListener() {
+            //Criando a Intent explícita
+            val intent = Intent(this, CadastroActivity::class.java)
+
+            //iniciando  a atividade
+            startActivity(intent)
+        }
+
         //Implementação do adaptador
         val produtosAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1)
 
         //definindo o adaptador na lista
         list_view_produtos.adapter = produtosAdapter
 
-        //definição do ouvinte do botão
-        btn_inserir.setOnClickListener {
-            val produto = txt_produto.text.toString() //pegando o valor digitado pelo usuário
-
-            if (produto.isNotEmpty()) {
-                produtosAdapter.add(produto) //enviando o item para a lista
-                txt_produto.text.clear() //limpando a caixa de texto
-            } else {
-                txt_produto.error = "Preencha um valor"
-            }
-        }
 
         list_view_produtos.setOnItemLongClickListener { adapterView: AdapterView<*>,
                                                         view: View, position: Int, id: Long ->
