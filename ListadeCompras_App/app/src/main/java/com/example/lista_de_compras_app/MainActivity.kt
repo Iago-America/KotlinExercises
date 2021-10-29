@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         btn_inserir.setOnClickListener {
             val produto = txt_produto.text.toString() //pegando o valor digitado pelo usuário
 
-            //produtosAdapter.add(produto) //enviando o item para a lista
-
             if (produto.isNotEmpty()) {
                 produtosAdapter.add(produto) //enviando o item para a lista
                 txt_produto.text.clear() //limpando a caixa de texto
