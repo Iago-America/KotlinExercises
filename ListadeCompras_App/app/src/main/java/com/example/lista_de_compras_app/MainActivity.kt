@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        list_view_produtos.setOnItemLongClickListener{ adapterView: AdapterView<*>,
-                                                       view: View, position: Int, id: Long ->
+        list_view_produtos.setOnItemLongClickListener { adapterView: AdapterView<*>,
+                                                        view: View, position: Int, id: Long ->
 
-            val	item = produtosAdapter.getItem(position) //buscando o item clicado
+            val item = produtosAdapter.getItem(position) //buscando o item clicado
 
             produtosAdapter.remove(item) // removendo o item clicado da lista
 
