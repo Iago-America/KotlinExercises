@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             val	item = produtosAdapter.getItem(position) //buscando o item clicado
 
             produtosAdapter.remove(item) // removendo o item clicado da lista
-            
+
             true //retorno indicando que o click foi realizado com sucesso
 
         }
