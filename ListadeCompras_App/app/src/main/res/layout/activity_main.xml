@@ -11,8 +11,8 @@
     <Button
         android:id="@+id/btn_adicionar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Adicionar itens" />
+        android:layout_height="55dp"
+        android:text="Adicionar itens"/>
 
     <TextView
         android:id="@+id/txt_total"
@@ -26,6 +26,7 @@
     <ListView
         android:id="@+id/list_view_produtos"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="592dp"></ListView>
+
 
 </LinearLayout>

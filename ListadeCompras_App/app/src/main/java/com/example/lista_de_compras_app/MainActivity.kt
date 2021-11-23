@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         btn_adicionar.setOnClickListener() {
             //Criando a Intent explícita
             val intent = Intent(this, CadastroActivity::class.java)
@@ -21,8 +22,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        override fun onResume() {
+            super.onResume()
+            val	adapter = list_view_produtos.adapter as ProdutoAdapter
+            adapter.clear()
+            produtosAdapter.addAll(produtosGlobal)
+        }
+
         //Implementação do adaptador
-        val produtosAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1)
+        val produtosAdapter = ProdutoAdapter(this)
 
         //definindo o adaptador na lista
         list_view_produtos.adapter = produtosAdapter
@@ -38,5 +46,7 @@ class MainActivity : AppCompatActivity() {
             true //retorno indicando que o click foi realizado com sucesso
 
         }
+
+
     }
 }
