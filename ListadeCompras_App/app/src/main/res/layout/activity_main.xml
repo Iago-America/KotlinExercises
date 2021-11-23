@@ -26,7 +26,7 @@
     <ListView
         android:id="@+id/list_view_produtos"
         android:layout_width="wrap_content"
-        android:layout_height="592dp"></ListView>
+        android:layout_height="592dp" />
 
 
 </LinearLayout>
